@@ -14,16 +14,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(
   cors({
-    origin: "https://capestonebackend.onrender.com",
-    //origin: "https://incandescent-kringle-368dd7.netlify.app",
+    origin: "https://incandescent-kringle-368dd7.netlify.app",
     //origin: "http://localhost:3000",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
 );
 
-// app.use("/auth", authRoute);
-app.use("https://capestonebackend.onrender.com/auth", authRoute);
+app.use("/auth", authRoute);
+// app.use("https://capestonebackend.onrender.com/auth", authRoute);
 app.listen("5000", () => {
   console.log("server running");
 });
