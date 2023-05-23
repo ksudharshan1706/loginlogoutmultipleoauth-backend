@@ -5,14 +5,14 @@ const CLIENT_URL = "http://localhost:3000/";
 //const CLIENT_URL = "https://incandescent-kringle-368dd7.netlify.app/";
 router.get("/login/success", (req, res) => {
   // console.log(req);
-  if (req.user) {
-    res.status(200).json({
-      success: true,
-      message: "successfull",
-      user: req.user,
-      //   cookie: req.cookies,
-    });
-  }
+  // if (req.user) {
+  res.status(200).json({
+    success: true,
+    message: "successfull",
+    user: req.user,
+    //   cookie: req.cookies,
+  });
+  // }
 });
 
 router.get("/logout", (req, res) => {
