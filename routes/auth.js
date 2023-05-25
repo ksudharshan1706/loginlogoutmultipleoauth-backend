@@ -4,6 +4,7 @@ const passport = require("passport");
 const CLIENT_URL = "http://localhost:3000/";
 //const CLIENT_URL = "https://incandescent-kringle-368dd7.netlify.app/";
 router.get("/login/success", (req, res) => {
+  console.log("here", req.user);
   if (req.user) {
     res.status(200).json({
       success: true,
